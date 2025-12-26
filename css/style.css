@@ -71,14 +71,17 @@ h1 {
 main { margin-top: 26px; }
 
 h2 {
-  margin: 0 0 14px;
+  margin: 24px 0 14px;
   font-size: 1.15rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--muted2);
 }
 
-.game {
+main > h2:first-of-type { margin-top: 0; }
+
+.game,
+.game_engine {
   padding: 18px 18px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
@@ -87,21 +90,29 @@ h2 {
   transition: transform 140ms ease, border-color 140ms ease, background-color 140ms ease;
 }
 
-.game:hover {
+.game:hover,
+.game_engine:hover {
   transform: translateY(-2px);
   border-color: rgba(125, 211, 252, 0.35);
   background: var(--surface2);
 }
 
-.game h3 {
+.game h3,
+.game_engine h3 {
   margin: 0;
   font-size: 1.35rem;
   letter-spacing: -0.01em;
 }
 
-.game p {
+.game p,
+.game_engine p {
   margin: 8px 0 14px;
   color: var(--muted);
+}
+
+.games {
+  display: grid;
+  gap: 16px;
 }
 
 .cta {
@@ -135,5 +146,6 @@ h2 {
 @media (max-width: 520px) {
   header { padding: 20px 18px; }
   .container { padding: 34px 16px; }
-  .game { padding: 16px 16px; }
+  .game,
+  .game_engine { padding: 16px 16px; }
 }
